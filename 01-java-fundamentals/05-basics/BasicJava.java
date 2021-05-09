@@ -15,11 +15,12 @@ public class BasicJava {
             }
 		}
 	}
-    public static int GetArraySum(int[] numbers) {
+    public static int GetArraySum(int[] nums) {
         int sum = 0;
-        for(int i = 0; i < numbers.length; i++) {
-            sum += numbers[i];
+        for(int i = 0; i < nums.length; i++) {
+            sum += nums[i];
         }
+        System.out.println(sum);
         return sum;
     }
     public static int PrintSum() {
