@@ -4,8 +4,6 @@ import java.util.Collections;
 import java.util.Random;
 
 public class PuzzleJava{
-    
-    private static PuzzleJava StringManipulator;
 
     public static ArrayList<Integer> SumGreater(int[] nums1){
         int sum = 0;
