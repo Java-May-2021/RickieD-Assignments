@@ -9,18 +9,18 @@ public class HashMapping {
         thisList.put("Take another byte", "Get it while it's hot");
         thisList.put("Don't tred on my keyboard", "Just like that, with a click");
         thisList.put("You call this Java?", "We were up all night");
-        thisList.remove("Good day for Java");
-        thisList.replace("Take another byte", "The same old thing");
+        thisList.remove("Good day for Java"); //Remove takes the key as an argument
+        thisList.replace("Take another byte", "The same old thing"); //Replace takes the key of the value that will be replaced. Then the value to be plugged in.
 
         String track = thisList.get("Be kind, kinda");
         System.out.println("This track contains the lyrics: " + track);
-        System.out.println(thisList.containsKey("Be kind, kinda"));
-        System.out.println(thisList.containsValue("Most of the day is spent with you"));
+        System.out.println(thisList.containsKey("Be kind, kinda")); // Returns boolean value.
+        System.out.println(thisList.containsValue("Most of the day is spent with you")); //Returns boolean value.
         System.out.println(thisList.size());
         System.out.println(thisList.values());
 
         //Use keySet to get keys.
-        Set<String> keys = thisList.keySet();
+        Set<String> keys = thisList.keySet(); // "keySet()" refers to the HashMap that was created
         for(String key: keys) {
             System.out.println(key + ": "+thisList.get(key));
         }
