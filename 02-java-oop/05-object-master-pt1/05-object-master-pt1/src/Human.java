@@ -36,7 +36,7 @@ public class Human {
     public Human(int healthLvl) {
         this.healthLvl = healthLvl;
     }
-
+    //Human attack method will decrease health by stregth level
     public void attack(Human target) {
         System.out.println("\n");
         System.out.println("Beginning Health: " + this.healthLvl);
