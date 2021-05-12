@@ -26,12 +26,4 @@ public class Gorilla extends Mammal {
         return this.energyLvl;
     }
 
-    // public void currentEnergyLvl(int[] energyLvl) {
-    //     int sum = 0;
-    //     for(int i = 0; i < energyLvl.length; i++) {
-    //         sum += energyLvl[i];
-    //     }
-    //     System.out.println(sum);
-    //     return this.energyLvl;
-    // }
 }
