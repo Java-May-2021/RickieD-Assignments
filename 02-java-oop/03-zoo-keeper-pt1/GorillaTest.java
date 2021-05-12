@@ -22,7 +22,9 @@ public class GorillaTest {
         gorilla.climb();
         
         //Can you add in a final energy level output?
-        // int[] crntLvl = gorilla.currentEnergyLvl();
-        // System.out.println(crntLvl);
+        System.out.println("\n-------------------------------------------------\n");
+        gorilla.currentEnergyLvl(0);
+        
     }
+
 }

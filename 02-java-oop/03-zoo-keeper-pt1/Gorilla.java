@@ -19,6 +19,12 @@ public class Gorilla extends Mammal {
         energyLvl -= 10;
         System.out.println("Energy level decreased to: " + this.energyLvl);
     }
+    //Method to show current energy level after actions
+    public int currentEnergyLvl(int energyLvl) {
+        System.out.println("Remaining energy: " + this.energyLvl);
+        this.energyLvl -= energyLvl;
+        return this.energyLvl;
+    }
 
     // public void currentEnergyLvl(int[] energyLvl) {
     //     int sum = 0;
