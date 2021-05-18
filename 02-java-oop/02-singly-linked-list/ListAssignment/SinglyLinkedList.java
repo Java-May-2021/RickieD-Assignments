@@ -1,3 +1,4 @@
+import java.util.NoSuchElementException;
 public class SinglyLinkedList {
     public Node head;
     public SinglyLinkedList() {
@@ -18,10 +19,20 @@ public class SinglyLinkedList {
         }
     }
     
-    // public void remove(int value) {
-    //     head = null;
-    //     newNode = 0;
-    // }
+    public void remove(int value) {
+        Node newNode = new Node(value);
+
+        if (head == null)
+            remove(value);
+        else {
+            Node runner = head;
+            for (int i = 0; i < value - 1; i++)
+                runner = runner.next;
+
+            runner.next = runner.next.next;
+            value--;
+        }
+    }
 
     public void printValues(){
         Node current = this.head;
