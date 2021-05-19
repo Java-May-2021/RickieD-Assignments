@@ -1,0 +1,23 @@
+
+a {
+	color:red;
+	margin:200px 0 0 400px;
+	
+}
+#date{
+	margin-left: 570px;
+	color: blue;
+}
+
+.showDate a {
+	margin-left: 630px;
+}
+#time{
+	margin-left: 600px;
+	font-size:xx-large;
+	color: green;
+}
+
+.showTime a {
+	margin-left: 630px;
+}
