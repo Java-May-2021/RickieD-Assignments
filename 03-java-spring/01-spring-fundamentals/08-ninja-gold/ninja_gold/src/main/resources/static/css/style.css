@@ -81,7 +81,7 @@ h3{
 	margin-left: 20px;
 }
 .activity{
-	width: 600px;
+	width: 650px;
 	border: 2px solid black;
 	overflow-y: auto;
 	max-height: 200px;
@@ -93,4 +93,23 @@ h3{
 }
 .red{
     color: red;
+}
+fieldset{
+	margin:30px 0 0 430px;
+	width: 600px
+}
+.jail a{
+	text-decoration:none;
+	color:black;
+}
+.jail button{
+	background-color: gold;
+	border:2px solid black;
+	margin: 5px 0 0 680px;
+	border-radius:5px;
+	height:30px;
+	width: 100px;
+}
+.jail h1{
+	margin:0 0 10px 83px;
 }
