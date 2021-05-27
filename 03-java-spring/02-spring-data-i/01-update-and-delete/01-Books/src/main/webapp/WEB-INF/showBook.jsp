@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +12,44 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 <title>Show Book</title>
 </head>
 <body>
-	<h1>Title: <c:out value="${book.title}"/></h1>
-	<p>Description: <c:out value="${book.description}"/></p>
-	<p>Language: <c:out value="${book.language}"/></p>
-	<p>Number of Pages: <c:out value="${book.numberOfPages}"/></p>
+	<h1><c:out value="${book.title}" /></h1>
 	
-	<a href="/books" class="btn btn-secondary">Home</a>
+	<p>Description: <c:out value="${book.description}" /></p>
+	<p>Language: <c:out value="${book.language}" /></p>
+	<p>Number of pages: <c:out value="${book.numberOfPages}" /></p>
+	
+	<a href="/books">Back to Catalog</a>
+
+<hr><hr><hr>	
+
+<h3>Edit Book</h3>
+<form:form method="POST" action="/books/update/${book.id}" modelAttribute="book">
+<div class="form-group">
+	<form:label path="title">Title:
+	<form:errors path="title"/>
+	<form:input path="title"/></form:label>
+</div>
+<div class="form-group">
+	<form:label path="description">Description:
+	<form:errors path="description"/>
+	<form:textarea rows="1" cols="100" path="description"/></form:label>
+</div>
+<div class="form-group">
+	<form:label path="language">Language:
+	<form:errors path="language"/>
+	<form:input path="language"/></form:label>
+</div>
+<div class="form-group">
+	<form:label path="numberOfPages">Number Of Pages:
+	<form:errors path="numberOfPages"/>
+	<form:input path="numberOfPages"/></form:label>
+</div>
+<button class="btn btn-secondary">Save Changes</button>
+</form:form><br>
+
+<a href="/books/delete/${book.id}" class="btn btn-dark">Delete This Book</a><br><br>
+
+<a href="/books">Back to Catalog</a>
+
 </body>
 </html>

@@ -69,26 +69,26 @@ public class BookController {
 	public String findById(@ModelAttribute("book") Book book, Model model, @PathVariable("id") Long id) {
 		Book singleBook = this.bookService.getSingleBook(id);
 		model.addAttribute("book", singleBook);
-		return "/books/new.jsp";
+		return "showBook.jsp";
 	}
 	
 	@RequestMapping("/books/edit/{id}")
     public String editBook(@PathVariable("id") int id, Model model) {
         Book book = bookService.findBookByIndex(id);
         if (book != null){
-            model.addAttribute("book", book);
+            model.addAttribute("books", book);
             return "editBook.jsp";
         }else{
             return "redirect:/books";
         }
     }
 	@PostMapping("/books/update/{id}")
-    public String updateBook(@PathVariable("id") int id, @Valid @ModelAttribute("book") Book book, BindingResult result, Model model) {
+    public String updateBook(@PathVariable("id") Long id, @Valid @ModelAttribute("book") Book book, BindingResult result, Model model) {
         if (result.hasErrors()) {
-            return "editBook.jsp";
+            return "showBook.jsp";
         }else{
             this.bookService.updateBook(book);
-            return "redirect:/books";
+            return "redirect:/books/{id}";
         }
     }
 	
