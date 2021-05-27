@@ -31,7 +31,7 @@ public class counterController {
 	public String newCount(HttpSession session) {
 		//first retrieve the current value in session, casting from Object to Integer
 		Integer currentCount = (Integer) session.getAttribute("count");
-		//increment count by 1
+		//increment count by 2
 		currentCount+=2;
 		// set the updated count value back into session
 		session.setAttribute("count", currentCount);
