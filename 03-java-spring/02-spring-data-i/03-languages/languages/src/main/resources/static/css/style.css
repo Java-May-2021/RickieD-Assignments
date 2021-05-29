@@ -1,0 +1,57 @@
+.name input{
+	margin-left:30px;
+}
+.add h1{
+	text-align:center;
+}
+.add label{
+	margin-left:600px;
+}
+.add input{
+	float:right;
+	clear:left;
+	margin-left: 30px;
+}
+table{
+	width:800px;
+}
+.add button{
+	margin-left:790px;
+}
+.dash a{
+	float: right;
+	margin:50px 50px 0 0;
+}
+#edit a {
+	float:right;
+}
+
+#show p{
+	font-size:x-large;
+	margin:100px 0 0 100px;
+}
+#show a {
+	margin-left:100px;
+}
+h1{
+	text-align:center;
+}
+.editTitle a {
+	float:right;
+	margin:50px 40px 0 0;
+}
+.editTitle h1{
+	margin:100px 0 40px 550px;
+	display:inline-block;
+}
+.edit label{
+	margin-left:600px;
+}
+.edit input{
+	float:right;
+	clear:left;
+	margin-left: 30px;
+}
+.edit button{
+	margin-left:790px;
+}
