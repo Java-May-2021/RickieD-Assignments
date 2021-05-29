@@ -24,7 +24,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 		<h4>${err}</h4>
 	</c:forEach>
 	<div class="edit">
-	<form:form method="POST" action="/languages/update/${language.id}" modelAttribute="language" >
+	<form:form method="PUT" action="/languages/${language.id}/update" modelAttribute="language" >
 		<div class="form-group row">
 			<form:label path="name">Name:
 			<form:errors path="name"/>

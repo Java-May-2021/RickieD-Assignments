@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 
 import com.rickied.languages.models.Language;
 import com.rickied.languages.services.LanguageService;
@@ -57,13 +58,13 @@ public class LanguageController {
 	}
 	//The GET /languages/{id}/edit route should show the edit page to of a specific language
 	//Update A Language
-	@GetMapping("/languages/edit/{id}")
-	public String updateLanguage(@PathVariable("id") Long id, Model model, @ModelAttribute("lanuage") Language language) {
+	@GetMapping("/languages/{id}/edit")
+	public String editLanguage(@PathVariable("id") Long id, Model model, @ModelAttribute("lanuage") Language language) {
 		model.addAttribute("language", languageService.getSingleLanguages(id));
 		return "editLang.jsp";
 	}
-	@PostMapping("languages/update/{id}")
-	public String editLanguage(@Valid @ModelAttribute("language") Language language, BindingResult result, @PathVariable("id") Long id, Model model) {
+	@PutMapping("languages/{id}/update")
+	public String updateLanguage(@Valid @ModelAttribute("language") Language language, BindingResult result, @PathVariable("id") Long id, Model model) {
 		Long languageId = language.getId();
 		if(result.hasErrors()) {			//All routes should be validated and show errors.
 			return "editLang.jsp";

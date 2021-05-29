@@ -29,7 +29,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     		<td><a href="/languages/view/${lang.id}"><c:out value="${lang.name}"/></a></td>
     		<td><c:out value="${lang.creator}"/></td>
     		<td><c:out value="${lang.version}"/></td>
-    		<td><a href="languages/destroy/${lang.id}">delete</a> <span>|</span> <a href="languages/edit/${lang.id}">edit</a></td>
+    		<td><a href="languages/destroy/${lang.id}">delete</a> <span>|</span> <a href="languages/${lang.id}/edit">edit</a></td>
 		</tr>
 		</c:forEach>
     </tbody>

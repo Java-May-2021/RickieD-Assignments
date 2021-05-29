@@ -24,7 +24,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 	
 	<p><c:out value="${language.version}" /></p>
 	
-	<a href="/languages/edit/${language.id}">Edit</a><br>
+	<a href="/languages/${language.id}/edit">Edit</a><br>
 	<a href="/languages/destroy/${language.id}">Delete</a>
 	</div>
 </body>
