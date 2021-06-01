@@ -1,0 +1,40 @@
+*{
+	padding:0;
+	margin:0;
+}
+.index h1{
+	margin:100px 0 0 600px;
+}
+.index p{
+	margin-left:590px;
+}
+.new  {
+	margin: 100px 0 0 620px;
+}
+.new h1{
+	margin-left: -15px;
+}
+.new button{
+	margin-left: 100px;
+}
+.view {
+	margin:50px 0 0 100px;
+}
+.license{
+	display:inline-block;
+	margin-left: 50px;
+}
+.license input{
+	float:right;
+}
+.license select{
+	float:right;
+	height:30px;
+	width:170px;
+}
+.license button{
+	margin:0 10px 0 135px;
+}
+.form-group{
+	width:400px;
+}
