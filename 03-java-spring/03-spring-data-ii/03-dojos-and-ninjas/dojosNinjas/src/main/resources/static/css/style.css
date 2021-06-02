@@ -1,0 +1,40 @@
+*{
+	padding:0;
+	margin:0;
+}
+.index h1{
+	margin:200px 0 0 600px;
+}
+.index p{
+	margin-left:555px;
+}
+
+.dojo {
+	margin:100px 0 0 100px;
+}
+.dojo h1{
+	margin-left:-10px;
+}
+.dojo button {
+	margin-left:7px;
+}
+.show h1{
+	display:inline-block;
+	font-size:xx-large;
+	margin-left:10px;
+}
+
+.ninja{
+	margin:50px 0 0 100px;
+}
+.ninja h1, h3, p{
+	margin-left:-15px;
+}
+
+.ninja button {
+	margin-left: 60px;
+}
+.show a{
+	display:inline-block;
+	margin:10px 10px 10px 750px;
+}
