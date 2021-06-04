@@ -1,0 +1,97 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.index h1 {
+	display:inline-block;
+	margin:10px 470px 0 20px;
+}
+
+.add{
+	margin:20px 0 0 100px;
+}
+
+.add h1, h3{
+	margin-left:-15px;
+}
+.add label{
+	margin:0 0;
+}
+.add button {
+	margin-left:60px;
+}
+
+.category {
+	margin:20px 0 0 100px;
+}
+
+.category h1{
+	margin:0 0 20px -15px;
+}
+
+.category h3{
+	margin-bottom: 20px;
+}
+
+.category button {
+	margin-left: 32px;
+}
+.category label {
+	margin:20px 0 0 0px;
+}
+
+.showCate h3, label{
+	margin:20px 0 0 50px;
+}
+.showCate a {
+	margin:0 -45px 0 50px;
+}
+
+.showCate ul{
+	margin-left:70px;
+}
+.showCate span {
+	margin:0 -45px 0 50px;
+}
+
+.showCate select{
+	height:30px;
+}
+
+.showCate button{
+	margin:0 0 5px 0;
+}
+.text{
+	display:inline-block;
+	vertical-align:top;
+	margin:20px -270px 0 450px;
+}
+.text ul{
+	list-style-type:circle;
+}
+.text h5 {
+	margin-left:-20px;
+}
+.showProduct h3, h5{
+	margin: 20px 0 0 50px;
+}
+
+.showProduct ul {
+	margin-left: 70px;
+}
+.showProduct label {
+	margin-left:50px;
+}
+.showProduct a {
+	margin:0 -50px 0 50px;
+}
+.showProduct span {
+	margin:0 -45px 0 55px;
+}
+.showProduct select{
+	height:30px;
+}
+.showProduct button{
+	margin:0 0 5px 0;
+}
