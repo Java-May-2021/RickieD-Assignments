@@ -1,0 +1,72 @@
+*{
+	padding:0;
+	margin:0;
+}
+
+.add {
+	margin:20px 0 0 50px;
+}
+
+.add h1, h3 {
+	margin-left:-10px;
+}
+
+.add a {
+	margin: 10px 0 10px 1280px;
+}
+
+.add form {
+	margin:0 0;
+}
+
+.add button {
+	margin-left:100px;
+}
+
+.show h1{
+	display: inline-block;
+}
+
+.btn-group a{
+	margin:0 10px 10px 850px;
+}
+
+.profile span {
+	font-size: 23px;
+}
+
+.profile {
+	margin-left:50px;
+}
+
+.profile h1 {
+	margin-left:-15px;
+}
+
+.profile a {
+	margin-left:1280px;
+}
+
+.profile table {
+	width: 500px ;
+	margin-left:-20px;
+	display:inline-block;
+}
+
+.profile h3 {
+	margin-left:-15px;
+}
+
+.profile h2, form{
+	display:inline-block;
+	vertical-align: top;
+	margin-left: 200px;
+}
+
+.profile h2 {
+	margin-left:-15px;
+}
+
+.profile button {
+	margin-left: 85px;
+}
