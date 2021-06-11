@@ -88,6 +88,13 @@ public class HomeService {
 		return this.ansRepo.save(answer);
 	}
 	
+	
+	public void addAnswerToQuestion(Question question, Answer answer) {
+		List<Answer> selectedQuestion = question.getAnswers();
+		selectedQuestion.add(answer); 
+		this.ansRepo.save(answer);
+	}
+	
 	public Tag addTag(Tag tag) {
 		return this.tagRepo.save(tag);
 	}

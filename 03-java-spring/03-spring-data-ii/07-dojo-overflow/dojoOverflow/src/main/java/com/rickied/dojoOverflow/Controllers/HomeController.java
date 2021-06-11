@@ -45,7 +45,7 @@ public class HomeController {
 			return "newQuestion.jsp";
 		}
 		this.homeService.createQuestion(question);
-		System.out.println(question.getQuestion() + ", has been created");
+		System.out.println(question.getQuestion() + " has been created");
 		return "redirect:/questions";
 	}
 	
@@ -59,11 +59,11 @@ public class HomeController {
 	}
 	
 	@PostMapping("/answers")
-	public String createAnswers(@Valid @ModelAttribute("ans") Answer answer, BindingResult result, Model model) {
+	public String createAnswers(@Valid @ModelAttribute("ans") Answer answer, BindingResult result, Model model, Long id) {
 		if(result.hasErrors()) {
 			return "profile.jsp";
 		}
-		this.homeService.createAnswer(answer);
+		this.homeService.addAnswer(answer);
 		System.out.println(answer.getQuestion());
 		return "redirect:/question/" + answer.getQuestion().getId();
 	}
