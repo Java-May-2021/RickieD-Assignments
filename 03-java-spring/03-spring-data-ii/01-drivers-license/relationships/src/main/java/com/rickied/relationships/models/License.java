@@ -45,7 +45,7 @@ public class License {
     }
     
     @OneToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="license_id")
+    @JoinColumn(name="person_id")
     private Person person;
     
     public License() {
