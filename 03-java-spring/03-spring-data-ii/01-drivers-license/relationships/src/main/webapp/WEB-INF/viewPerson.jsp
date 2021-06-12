@@ -18,12 +18,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 
 	<h1><c:out value="${person.firstName} ${person.lastName}" /></h1><br>
 	
-	<h3>License Number: 000000<c:out value="${person.id}"/></h3><br>
+	<h3>License Number: ${person.license.getNumberAsString()}</h3><br>
 	
 	<h3>State: <c:out value="${person.license.state}"/></h3><br>
 	
 	<h3>Expiration Date: <fmt:formatDate pattern = "MM/dd/yyyy" type="date" value="${person.license.expirationDate}"/></h3>
 	
+			
 	<a href="/">Return</a>
 	</div>
 </body>

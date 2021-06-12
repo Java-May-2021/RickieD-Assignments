@@ -10,5 +10,5 @@ import com.rickied.relationships.models.Person;
 @Repository
 public interface PersonRepository extends CrudRepository<Person,Long> {
 	List<Person> findAll();
-
+	List<Person> findByLicenseIdIsNull();
 }

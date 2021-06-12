@@ -16,7 +16,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 	
 		<h1>Create License</h1>
 		
-		<h4>To generate a license number, select your name and enter the expiration date followed by licensing state or cancel to exit the system.</h4>
+		<h4>To generate a license number, select your name and enter the expiration date followed by licensing state, or cancel to exit the system.</h4>
 		
 		<hr><hr>
 				
@@ -32,11 +32,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 	
 		<form:label path="person">Customer:</form:label>
 		
+		
 		<form:select type="select" path="person">
 		
-		<c:forEach items="${allPersons}" var="person">
+		<c:forEach items="${allPersons}" var="per">
 		
-		<form:option value="${person.id}">${person.firstName} ${person.lastName}</form:option>
+		
+		<form:option value="${per.id}">${per.firstName} ${per.lastName}</form:option>
 		
 		</c:forEach>
 		
@@ -65,7 +67,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 		<form:errors path="expirationDate"></form:errors>
 		
 	</div>
-		<button type="submit" class="btn btn-outline-success" value="View License Details"/>View License Details</button>
+		<button type="submit" class="btn btn-outline-success">View License Details</button>
 				
 		<a href="/" class="btn btn-outline-danger">Cancel</a>
 		

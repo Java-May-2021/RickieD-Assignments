@@ -19,11 +19,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 @Entity
 @Table(name="licenses")
 public class License {
+	
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 	
-    private Double licenseNumber;
+    private Integer number;
     
     @Future
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -44,25 +45,25 @@ public class License {
     }
     
     @OneToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="person_id")
+    @JoinColumn(name="license_id")
     private Person person;
     
     public License() {
         
     }
     
-//    public String getNumberAsString() {
-//		int numZeros = 7 - String.valueOf(this.licenseNumber).length();
-//		StringBuilder str = new StringBuilder();
-//		for(int i = 0; i < numZeros; i++) {
-//			str.append('0');
-//		}
-//		return String.format("%s%d", str, this.licenseNumber);
-//	}
+    public String getNumberAsString() {
+		int numZeros = 7 - String.valueOf(this.number).length();
+		StringBuilder str = new StringBuilder();
+		for(int i = 0; i < numZeros; i++) {
+			str.append('0');
+		}
+		return String.format("%s%d", str, this.number);
+	}
     
-    public License(Long id, Double licenseNumber, Date expirationDay, String state) {
+    public License(Long id, Integer number, Date expirationDay, String state) {
     	this.id = id;
-    	this.licenseNumber = licenseNumber;
+    	this.number = number;
     	this.expirationDate = expirationDay;
     	this.state = state;
     }
@@ -74,12 +75,12 @@ public class License {
     	this.id = id;
     }
     
-    public Double getLicNumber() {
-    	return licenseNumber;
+    public Integer getNumber() {
+    	return number;
     }
     
-    public void setNumber(Double licenseNumber) {
-    	this.licenseNumber = licenseNumber;
+    public void setNumber(Integer number) {
+    	this.number = number;
     }
     
     public Date getExpirationDate() {

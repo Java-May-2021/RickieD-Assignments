@@ -52,12 +52,12 @@ public class LicenseController {
 	}
 	
 	@PostMapping("/license/create")
-	public String createLicense(@Valid @ModelAttribute("license")License license, BindingResult result) {
+	public String createLicense(@Valid  @ModelAttribute("license") License license, BindingResult result) {
 		if(result.hasErrors()) {
 			return "newLicense.jsp";
 		}else {
-			License newLicense = this.licenseService.createLicense(license);
-			Long newLicensePersonId = newLicense.getPerson().getId();//Gets id
+			this.licenseService.createLicense(license);
+			Long newLicensePersonId = license.getPerson().getId();
 			return "redirect:/details/" + newLicensePersonId;
 		}
 	}
@@ -68,7 +68,7 @@ public class LicenseController {
 		if(license != null) {
 			Date expireDate = license.getExpirationDate();
 			model.addAttribute("person", this.personService.getSinglePerson(id));
-//			model.addAttribute("licenseNumber", this.licenseService.generateLicenseNumber());
+			model.addAttribute("number", this.licenseService.createLicenseNumber());
 			model.addAttribute("license", license);
 			model.addAttribute("expDate", expireDate);
 			return "viewPerson.jsp";

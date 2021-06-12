@@ -15,6 +15,8 @@ import javax.validation.constraints.Size;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import net.bytebuddy.asm.Advice.This;
+
 @Entity
 @Table(name="persons")
 public class Person {
@@ -35,7 +37,8 @@ public class Person {
 	    private Date updatedAt;
 	    
 	    @OneToOne(mappedBy="person", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-	    private License license;
+	    
+		private License license;
 	    
 	    public Person() {
 	        
@@ -44,6 +47,8 @@ public class Person {
 	    public Person(String firstName, String lastName, Date createdAt, Date updatedAt) {
 	    	this.firstName = firstName;
 	    	this.lastName = lastName;
+	    	this.createdAt = createdAt;
+	    	this.updatedAt = updatedAt;
 	    }
 	    public Long getId() {
 	    	return id;
