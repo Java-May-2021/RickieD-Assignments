@@ -13,13 +13,13 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
 </head>
 <body>
 	<h3>Countries that speak Slovene</h3>
-		<table class="table table-warning">
+		<table class="table table-sm table-warning">
 	
    		<thead>
    		
        		<tr>
        		
-       			<th>Country Code</th>
+       			<th>Country Name</th>
             	<th>Language</th>
             	<th>Percentage</th>
             	
@@ -33,7 +33,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     			<c:forEach items="${sloveneCountries}" var="row">
     
 			<tr>
-		    	<td><c:out value="${row[0].country_code}"/></td>
+		    	<td><c:out value="${row[0].name}"/></td>
     			<td><c:out value="${row[1].language}"/></td>
     			<td><c:out value="${row[1].percentage}"/></td>
    
@@ -46,7 +46,7 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     
 		</table>
 		<h3>Total number of cities per country</h3>
-			<table class="table table-warning">
+			<table class="table table-sm table-warning">
 	
    		<thead>
    		
@@ -134,8 +134,8 @@ integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw
     
 			<tr>
 		    	<td><c:out value="${row[0].name}"/></td>
-    			<td><c:out value="${row[1].surface_area}"/></td>
-   				<td><c:out value="${row[1].population}"/></td>
+    			<td><c:out value="${row[1].language}"/></td>
+   				<td><c:out value="${row[1].percentage}"/></td>
 			</tr>
 			
 				</c:forEach>

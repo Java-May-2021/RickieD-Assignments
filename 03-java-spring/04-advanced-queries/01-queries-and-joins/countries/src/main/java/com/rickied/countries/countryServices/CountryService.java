@@ -30,6 +30,7 @@ public class CountryService {
 //	}
 	
 	public List<Object[]> findCountriesSpeakingSlovene() {
+		System.out.println(coRepo.findCountriesSpeakingSlovene());
 		return coRepo.findCountriesSpeakingSlovene();
 	}
 	

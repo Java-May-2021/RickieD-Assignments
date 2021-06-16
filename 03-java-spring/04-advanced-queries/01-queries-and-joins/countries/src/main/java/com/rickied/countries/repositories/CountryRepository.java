@@ -11,7 +11,7 @@ import com.rickied.countries.models.Country;
 
 @Repository
 public interface CountryRepository extends CrudRepository<Country, Long>{
-
+	
 	@Query("SELECT c, l FROM Country c JOIN c.languages l WHERE l.language = 'Slovene' "
 			+ "ORDER BY l.percentage DESC")
 	List<Object[]> findCountriesSpeakingSlovene();
