@@ -1,0 +1,15 @@
+*{
+	padding:0;
+	margin:0;
+}
+.login h1, button {
+	margin-left:10px;
+}
+
+.login p{
+	margin-left:0;
+}
+
+.register h1,h3, p, label, button {
+	margin-left:10px;
+}
