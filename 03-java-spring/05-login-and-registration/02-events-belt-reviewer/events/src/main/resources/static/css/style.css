@@ -1,0 +1,84 @@
+* {
+	padding:0;
+	margin:0;
+}
+
+.header h1, h3{
+	margin-left: 20px;
+}
+.register {
+	width:350px;
+	margin-left:20px;
+	display:inline-block;
+}
+
+.register input, select,option{
+	float:right;
+}
+
+.register button {
+	margin-left: 260px;
+}
+.login {
+	display: inline-block;
+	vertical-align: top;
+	margin-left:30px;
+	width:300px;
+	
+}
+.location input{
+	width:125px;
+}
+.location select, option{
+	height:28px;
+}
+.login input {
+	float:right;
+}
+
+.login button {
+	margin-left: 230px;
+}
+
+.new {
+	width:300px;
+	margin-left:20px;
+}
+.new input, select, option{
+	float:right;
+}
+.new h3{
+	margin-left:-5px;
+}
+
+.new button {
+	margin-left: 180px;
+}
+.city input{
+	width:127px;
+	margin-left:48px;
+}
+.update select, option {
+	height:28px;
+}
+.update button {
+	margin-left: 240px;
+}
+
+.name input{
+	margin-left: 70px;
+}
+
+.date input{
+	margin-left: 77px;
+}
+
+/* .activity{
+	width: 650px;
+	border: 2px solid black;
+	overflow-y: auto;
+	max-height: 200px;
+	min-height: 100px;
+	margin-left: 80px;
+}
+ */
